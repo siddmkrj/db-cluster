@@ -5,6 +5,7 @@ metadata:
   namespace: database
 spec:
   storageClassName: ""
+  volumeName: neo4j-pv
   accessModes:
     - ReadWriteMany
   resources:

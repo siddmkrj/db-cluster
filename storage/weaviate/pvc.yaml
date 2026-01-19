@@ -5,6 +5,7 @@ metadata:
   namespace: database
 spec:
   storageClassName: ""
+  volumeName: weaviate-pv
   accessModes:
     - ReadWriteMany
   resources:
