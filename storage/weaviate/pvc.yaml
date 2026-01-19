@@ -4,6 +4,7 @@ metadata:
   name: weaviate-pvc
   namespace: database
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteMany
   resources:

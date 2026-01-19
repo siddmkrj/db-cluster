@@ -4,6 +4,7 @@ metadata:
   name: redis-pvc
   namespace: database
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteMany
   resources:
