@@ -52,6 +52,9 @@ kubectl get namespaces
 ## Create Persistent Volumes & Claims
 
 ```bash
+kubectl apply -f storage/local-storage-class.yaml
+kubectl get storageclass
+
 kubectl apply -f storage/redis/
 kubectl apply -f storage/mysql/
 kubectl apply -f storage/neo4j/
