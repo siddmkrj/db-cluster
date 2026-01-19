@@ -4,7 +4,7 @@ metadata:
   name: mysql-pvc
   namespace: database
 spec:
-  storageClassName: ""
+  storageClassName: local-storage 
   volumeName: mysql-pv
   accessModes:
     - ReadWriteMany

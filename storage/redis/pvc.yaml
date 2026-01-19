@@ -4,7 +4,7 @@ metadata:
   name: redis-pvc
   namespace: database
 spec:
-  storageClassName: ""
+  storageClassName: local-storage 
   volumeName: redis-pv
   accessModes:
     - ReadWriteMany

@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: redis-pv
 spec:
-  storageClassName: ""
+  storageClassName: local-storage 
   capacity:
     storage: 5Gi
   accessModes:

@@ -4,7 +4,7 @@ metadata:
   name: neo4j-pvc
   namespace: database
 spec:
-  storageClassName: ""
+  storageClassName: local-storage 
   volumeName: neo4j-pv
   accessModes:
     - ReadWriteMany
