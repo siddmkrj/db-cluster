@@ -1,0 +1,8 @@
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - image: mysql
+          volumeMounts:
+            - mountPath: /data

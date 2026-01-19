@@ -1,0 +1,6 @@
+kind: Cluster
+nodes:
+  - role: control-plane
+    extraMounts:
+      - hostPath: /Users/siddhartha/k8s-data
+        containerPath: /k8s-data

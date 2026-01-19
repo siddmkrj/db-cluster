@@ -1,0 +1,4 @@
+kind: PersistentVolume
+spec:
+  hostPath:
+    path: /k8s-data/redis

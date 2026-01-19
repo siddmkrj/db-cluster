@@ -1,0 +1,8 @@
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - image: neo4j
+          volumeMounts:
+            - mountPath: /data

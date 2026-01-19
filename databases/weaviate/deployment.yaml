@@ -1,0 +1,8 @@
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - image: weaviate
+          volumeMounts:
+            - mountPath: /data

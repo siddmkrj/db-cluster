@@ -7,8 +7,11 @@ kind-*.log
 # ----------------------------------
 # Local persistent data (NEVER COMMIT)
 # ----------------------------------
+k8s-data/
+**/k8s-data/
 data/
-!data/.keep
+data-*/
+
 # ----------------------------------
 # Secrets (very important)
 # ----------------------------------
