@@ -73,7 +73,7 @@ kubectl create secret generic mysql-secret \
   -n database
 
 kubectl create secret generic neo4j-secret \
-  --from-literal=NEO4J_AUTH=neo4j/devpassword \
+  --from-literal=NEO4J_AUTH=neo4j/Ognam321! \
   -n database
 
 kubectl get secrets -n database
