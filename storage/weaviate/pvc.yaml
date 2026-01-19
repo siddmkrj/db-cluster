@@ -2,10 +2,10 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: weaviate-pvc
-  namespace: weaviate
+  namespace: database
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 5Gi
