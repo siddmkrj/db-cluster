@@ -17,19 +17,17 @@ spec:
       containers:
         - name: neo4j
           image: neo4j:5
+          ports:
+            - containerPort: 7474
+            - containerPort: 7687
           env:
             - name: NEO4J_AUTH
               valueFrom:
                 secretKeyRef:
                   name: neo4j-secret
                   key: NEO4J_AUTH
-
-        - name: NEO4J_server_config_strict__validation
-          value: "false"
-
-          ports:
-            - containerPort: 7474
-            - containerPort: 7687
+            - name: NEO4J_server_config_strict__validation
+              value: "false"
           volumeMounts:
             - name: neo4j-data
               mountPath: /data
