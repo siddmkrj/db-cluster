@@ -67,14 +67,13 @@ kubectl get pvc -A
 mkdir -p secrets
 kubectl create secret generic mysql-secret \
   --from-literal=MYSQL_ROOT_PASSWORD=devpassword \
-  -n mysql
+  -n database
 
 kubectl create secret generic neo4j-secret \
   --from-literal=NEO4J_AUTH=neo4j/devpassword \
-  -n neo4j
+  -n database
 
-kubectl get secrets -n mysql
-kubectl get secrets -n neo4j
+kubectl get secrets -n database
 ```
 
 ## Deploy databases
