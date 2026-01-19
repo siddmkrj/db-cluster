@@ -56,4 +56,35 @@ kubectl apply -f storage/redis/
 kubectl apply -f storage/mysql/
 kubectl apply -f storage/neo4j/
 kubectl apply -f storage/weaviate/
+
+kubectl get pv
+kubectl get pvc -A
+```
+
+## Create secrets
+
+```bash
+mkdir -p secrets
+kubectl create secret generic mysql-secret \
+  --from-literal=MYSQL_ROOT_PASSWORD=devpassword \
+  -n mysql
+
+kubectl create secret generic neo4j-secret \
+  --from-literal=NEO4J_AUTH=neo4j/devpassword \
+  -n neo4j
+
+kubectl get secrets -n mysql
+kubectl get secrets -n neo4j
+```
+
+## Deploy databases
+
+```bash
+kubectl apply -f databases/redis/
+kubectl apply -f databases/mysql/
+kubectl apply -f databases/neo4j/
+kubectl apply -f databases/weaviate/
+
+kubectl get pods -A
+kubectl get services -A
 ```

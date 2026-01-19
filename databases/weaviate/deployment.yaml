@@ -1,8 +1,32 @@
+apiVersion: apps/v1
 kind: Deployment
+metadata:
+  name: weaviate
+  namespace: weaviate
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weaviate
   template:
+    metadata:
+      labels:
+        app: weaviate
     spec:
       containers:
-        - image: weaviate
+        - name: weaviate
+          image: semitechnologies/weaviate:latest
+          env:
+            - name: AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED
+              value: "true"
+            - name: PERSISTENCE_DATA_PATH
+              value: "/var/lib/weaviate"
+          ports:
+            - containerPort: 8080
           volumeMounts:
-            - mountPath: /data
+            - name: weaviate-data
+              mountPath: /var/lib/weaviate
+      volumes:
+        - name: weaviate-data
+          persistentVolumeClaim:
+            claimName: weaviate-pvc
