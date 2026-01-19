@@ -7,7 +7,7 @@ spec:
   storageClassName: local-storage 
   volumeName: mysql-pv
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi

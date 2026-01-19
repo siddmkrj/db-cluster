@@ -7,7 +7,7 @@ spec:
   storageClassName: local-storage 
   volumeName: neo4j-pv
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
