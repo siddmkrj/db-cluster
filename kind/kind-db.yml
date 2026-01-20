@@ -5,3 +5,5 @@ nodes:
     extraMounts:
       - hostPath: /Users/siddhartha/k8s-data
         containerPath: /k8s-data
+      - hostPath: /Users/siddhartha/Projects/db-cluster/neo4j-plugins
+        containerPath: /neo4j-plugins

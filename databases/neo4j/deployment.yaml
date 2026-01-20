@@ -53,7 +53,8 @@ spec:
               value: "2G"
             - name: NEO4J_dbms_memory_pagecache_size
               value: "2G"
-            
+            - name: NEO4J_server_config_strict__validation_enabled
+              value: "false"            
           volumeMounts:
             - name: neo4j-data
               mountPath: /data
@@ -64,4 +65,5 @@ spec:
           persistentVolumeClaim:
             claimName: neo4j-pvc
         - name: neo4j-plugins
-          emptyDir: {}
+          hostPath:
+            path: /neo4j-plugins
