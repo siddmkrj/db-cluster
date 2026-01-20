@@ -100,3 +100,17 @@ kubectl port-forward -n database svc/redis 6379:6379 >/tmp/redis-portforward.log
 kubectl port-forward -n database svc/weaviate 8080:8080 >/tmp/weaviate-portforward.log 2>&1 & \
 kubectl port-forward -n database svc/neo4j 7474:7474 >/tmp/neo4j-portforward.log 2>&1 &
 ```
+
+
+## Cleanup all
+
+```bash
+kubectl delete ns database --ignore-not-found
+kubectl delete all --all --all-namespaces
+kubectl delete pvc --all --all-namespaces
+kubectl delete pv --all
+kubectl delete configmap --all --all-namespaces
+kubectl delete secret --all --all-namespaces
+kind delete cluster --name db-cluster
+```
+
